@@ -1,7 +1,11 @@
 # Recyclerview-Pagination
 Android MVVM using Kotlin with Room Recyclerview Pagination
 
-# Using for Retrofit And RXJava 
+# Using for API
+Retrofit 
+
+RXJava 
+
 Rx Android 
 
 OKHttp
