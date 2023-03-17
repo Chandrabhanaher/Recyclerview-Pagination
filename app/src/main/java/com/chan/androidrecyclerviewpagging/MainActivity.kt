@@ -10,6 +10,9 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
 import com.chan.androidrecyclerviewpagging.databinding.ActivityMainBinding
+import com.microsoft.appcenter.AppCenter
+import com.microsoft.appcenter.analytics.Analytics
+import com.microsoft.appcenter.crashes.Crashes
 
 class MainActivity : AppCompatActivity() {
 
@@ -32,6 +35,11 @@ class MainActivity : AppCompatActivity() {
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
         }
+
+        if(!AppCenter.isConfigured()){
+            AppCenter.start(application, "8ddd7ed2-2721-4890-9c57-e459abcc87c9", Analytics.getInstance().javaClass, Crashes.getInstance().javaClass)
+        }
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
